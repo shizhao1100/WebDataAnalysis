@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="keywords" content="Tutoring Responsive web template,
+ Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG,
+ SonyErricsson, Motorola web design" />-->
+<script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); }
+</script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/d3.js"></script> 
+<script src="lib/bootstrap.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script src="js/FromWhere.js"></script>
+<script src="js/SeleNumber.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+</script>
+<!--start-smoth-scrolling-->
+</head>
+<body>
+	<!--start-header-->
+	<div class="header" id="home">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" /></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li id="homeTop" class="active">
+                        <span id="title">电商商品数据分析系统</span>
+                        <!--<a href="index.html" class="hvr-bounce-to-top">
+                            <span>电商商品数据分析系统</span>
+                            <span class="sr-only">(current)</span>
+                        </a>-->
+                    </li>
+					<!--<li><a href="wordCloud.html" class="hvr-bounce-to-top">评论词云</a></li>
+					<li><a href="tag.html" class="hvr-bounce-to-top">印象标签</a></li>
+					<li><a href="tradeNum.html" class="hvr-bounce-to-top">月交易量</a></li>
+					<li><a href="priceChange.html" class="hvr-bounce-to-top">价格变化</a></li>-->
+				</ul>
+				<div class="clearfix"></div>
+			</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
+	<!--end-header-->
+
+    <div id="content">
+        <!--left page-->
+        <div id="left">
+            <div id = "FromWhere"></div>
+        </div>
+
+        <!--right grid-->
+        <div id="right" class="panel panel-default">
+            <div class="panel-heading">
+                <span class="panel-title">商品列表</span>
+            </div>
+            <div class="panel-body">
+                <select class="form-control">
+                    <option>按销量从高到低</option>
+                    <option>按价格从高到低</option>
+                    <option>按评论数量排行</option>
+                </select>
+                <div id="data">
+                    <!--hahahahha-->
+                </div>
+                <nav id="pageChoose">
+                    <ul class="pagination pagination-lg">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+	<!--start-footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-main">
+				<div class="col-md-4 footer-left">
+					<span class="glyphicon glyphicon-map-marker map-marker" aria-hidden="true"></span>
+					<p>能力有限公司, <span>倾情奉献,</span> 6.20-6.26.</p>
+				</div>
+				<div class="col-md-4 footer-left">
+					<span class="glyphicon glyphicon-phone map-marker" aria-hidden="true"></span>
+					<p>+86 181 1399 2111 <span>+86 173 1690 2186</span> </p>
+				</div>
+				<div class="col-md-4 footer-left">
+					<p class="footer-class">Copyright &copy; 2016能力有限公司.</p>
+
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+	<!--end-footer-->
+</body>
+</html>
