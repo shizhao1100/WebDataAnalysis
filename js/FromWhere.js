@@ -1,7 +1,7 @@
 var ShowFromWhere = function(meg){     
        
-        var width = 500;
-		var height = 500;
+        var width = 700;
+		var height = 600;
 
         var dataset = new Array();
         
@@ -44,7 +44,7 @@ var ShowFromWhere = function(meg){
 		
         var piedata = pie(dataset);
 
-        svg.append("text").text("各电商商品数量").attr("transform","translate(190,20)");
+        svg.append("text").text("各电商商品数量").attr("transform","translate(285,180)");
 
 
 		var arcs = svg.selectAll("g")

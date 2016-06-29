@@ -28,7 +28,7 @@
     width: 74%;
     height: 100%;
     float: left;
-
+    background-color: lightgray;
 }
 #right{
     position: relative;
@@ -49,6 +49,11 @@
 }
 #FromWhere{
     position: absolute;
-    left: 700px;
-    top:  50px;
+    left: 650px;
+    top:  -70px;
+}
+#BottomGraph{
+    position: absolute;
+    left: 50px;
+    top:  600px;
 }
