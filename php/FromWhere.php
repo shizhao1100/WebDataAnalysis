@@ -34,7 +34,7 @@ $data['TM'] = $tmrow['Count(*)'];
 $data['TB'] = $tbrow['Count(*)'];
 $data['JD'] = $jdrow['Count(*)'];
 $data['MLS'] = $meilishuorow['Count(*)'];
-$data['YHD'] = $meilishuorow['Count(*)'];
+$data['YHD'] = $yihaodianrow['Count(*)'];
 
 $jos = json_encode($data);
 echo $jos;

@@ -1,7 +1,7 @@
 var ShowFromWhere = function(meg){     
        
-        var width = 400;
-		var height = 400;
+        var width = 500;
+		var height = 500;
 
         var dataset = new Array();
         
@@ -44,7 +44,7 @@ var ShowFromWhere = function(meg){
 		
         var piedata = pie(dataset);
 
-        svg.append("text").text("各电商商品数量").attr("transform","translate(140,20)");
+        svg.append("text").text("各电商商品数量").attr("transform","translate(190,20)");
 
 
 		var arcs = svg.selectAll("g")
@@ -53,11 +53,21 @@ var ShowFromWhere = function(meg){
 					  .append("g")
                       .attr("where",function(d,i){ i++; return i;})
 					  .attr("transform","translate("+ (width/2) +","+ (width/2) +")");
-
+		Getcolor =function(i){
+			var Result;
+			switch (i) {
+				case 0: Result = "京东"; break;
+                case 1: Result = "淘宝"; break;
+                case 2: Result = "美丽说"; break;
+				case 3: Result = "一号店"; break;
+				case 4: Result = "天猫"; break;
+			}
+			return ReturnColor(Result);
+		}
 
 		arcs.append("path")
 			.attr("fill",function(d,i){
-				return color(i);
+				return Getcolor(i);
 			})
 			.attr("d",function(d){
 				return arc(d);

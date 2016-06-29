@@ -44,3 +44,11 @@
     position: absolute;
     bottom: 0;
 }
+#SellDist{
+    position: absolute;
+}
+#FromWhere{
+    position: absolute;
+    left: 700px;
+    top:  50px;
+}

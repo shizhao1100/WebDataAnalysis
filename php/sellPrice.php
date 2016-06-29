@@ -26,25 +26,25 @@ $data = array();
 
 while($tbrow){
     $data[$i]['name'] = $tbrow['ProductName'];
-    $data[$i]['number'] = $tbrow['comment_number'];
+    $data[$i]['number'] = $tbrow['Price'];
     $i++;
     $tbrow = $tbresult -> fetch_assoc();
 }
 while($jdrow){
     $data[$i]['name'] = $jdrow['ProductName'];
-    $data[$i]['number'] = $jdrow['comment_number'];
+    $data[$i]['number'] = $jdrow['Price'];
     $i++;
     $jdrow = $jdresult -> fetch_assoc();
 }
 while($meilishuorow){
     $data[$i]['name'] = $meilishuorow['ProductName'];
-    $data[$i]['number'] = $meilishuorow['comment_number'];
+    $data[$i]['number'] = $meilishuorow['Price'];
     $i++;
     $meilishuorow = $meilishuoresult -> fetch_assoc();
 }
 while($yihaodianrow){
     $data[$i]['name'] = $yihaodianrow['ProductName'];
-    $data[$i]['number'] = $yihaodianrow['comment_number'];
+    $data[$i]['number'] = $yihaodianrow['Price'];
     $i++;
     $yihaodianrow = $yihaodain -> fetch_assoc();
 }
