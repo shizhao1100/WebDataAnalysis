@@ -58,34 +58,33 @@
                                 .attr("width",width)  
                                 .attr("height",height);  
 
-       svg.append("text").text("各电商商品价格分布").attr("transform","translate(240,30)");
+       svg.append("text").text("各电商商品价格分布").attr("transform","translate(180,30)");
 
 
        var appendsmllRect = function(color,text_,x,y){ svg.append("rect").attr("width",15).attr("height",15).attr("fill",color).attr("transform","translate("+x+","+y+")");
                                                        svg.append("text").text(text_).attr("transform","translate("+(x+30)+","+(y+15)+")");}
 
-       svg.append("rect").text("各电商商品价格分布").attr("transform","translate(240,20)");
+       svg.append("rect").text("各电商商品价格分布").attr("transform","translate(180,20)");
 
-       appendsmllRect("RGB(230,131,168)","美丽说",450,100);
-       appendsmllRect("RGB(24,83,141)","一号店",450,130);
-       appendsmllRect("RGB(229,75,77)","天猫",450,160);
-       appendsmllRect("RGB(164,196,191)","淘宝",450,190);
-       appendsmllRect("RGB(23,125,127)","京东",450,220);
+       appendsmllRect("RGB(230,131,168)","美丽说",300,100);
+       appendsmllRect("RGB(24,83,141)","一号店",300,130);
+       appendsmllRect("RGB(229,75,77)","天猫",300,160);
+       appendsmllRect("RGB(164,196,191)","淘宝",300,190);
+       appendsmllRect("RGB(23,125,127)","京东",300,220);
 
         var xAxisScale = d3.scale.ordinal()  
                         .domain(d3.range(dataset.length))  
-                        .rangeRoundBands([0,500]);  
+                        .rangeRoundBands([0,400]);  
                               
         var yAxisScale = d3.scale.linear()  
                         .domain([0,d3.max(dataset)])  
-                        .range([500,0]);  
+                        .range([300,0]);  
                               
         var xAxis = d3.svg.axis()  
                         .scale(xAxisScale)
                         .tickFormat(function(d,i){
                             return 0+100*i+"-"+100*(i+1);
-                        })
-                        .orient("bottom");  
+                        });  
           
         var yAxis = d3.svg.axis()  
                         .scale(yAxisScale)  
@@ -93,11 +92,11 @@
   
         var xScale = d3.scale.ordinal()  
                         .domain(d3.range(dataset.length))  
-                        .rangeRoundBands([0,500],0.05);  
+                        .rangeRoundBands([0,400],0.05);  
                               
         var yScale = d3.scale.linear()  
                         .domain([0,d3.max(dataset)])  
-                        .range([0,500]);  
+                        .range([0,300]);  
 
         function ShowRect(type,data,BeforeData,color){  
         svg.selectAll(type)  
@@ -108,7 +107,7 @@
                 return 60 + xScale(i);  
            } )  
            .attr("y",function(d,i){  
-                return 50 + 500 - yScale(d) -yScale(BeforeData[i]) ;  
+                return 50 + 300 - yScale(d) -yScale(BeforeData[i]) ;  
            })  
            .attr("width", function(d,i){  
                 return xScale.rangeBand();  
@@ -144,7 +143,7 @@
                 return 60 + xScale(i);  
            } )  
            .attr("y",function(d,i){  
-                return 50 + 500 - yScale(d) ;  
+                return 50 + 300 - yScale(d) ;  
            })  
             .attr("dx", function(d,i){  
                 return xScale.rangeBand()/3;  
@@ -159,7 +158,7 @@
              
         svg.append("g")  
             .attr("class","axis")  
-            .attr("transform","translate(60,550)")  
+            .attr("transform","translate(60,350)")  
             .call(xAxis);  
               
         svg.append("g")  
@@ -177,8 +176,8 @@
               dataType: 'json',     //接受数据格式    
               error:function(){console.log("error");},
               success:function(meg){ //请求成功后处理函数。
-                  console.log(meg);
-                  SellDist(meg,550,600)           
+                  //console.log(meg);
+                  SellDist(meg,500,400)
                 }
           })
  });

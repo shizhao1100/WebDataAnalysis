@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>评论词云</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta name="keywords" content="Tutoring Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript">
@@ -14,8 +17,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/style.css" rel='stylesheet' type='text/css' />
     <link href="css/wordCloud.css" rel="stylesheet" type="text/css" />
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/d3.js"></script> 
+<script src="lib/bootstrap.js"></script>
+    <script src="lib/highcharts.js"></script>
+
+<script type="text/javascript" src="js/other.js"></script>
+<script type="text/javascript" src="js/ShowTab.js"></script>
+    <script type="text/javascript" src="js/commentNumber.js"></script>
+    <script type="text/javascript" src="js/price.js"></script>
 <!---- start-smoth-scrolling---->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
@@ -47,11 +57,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.html" class="hvr-bounce-to-top">首页 <span class="sr-only">(current)</span></a></li>
-					<li><a href="wordCloud.html" class="hvr-bounce-to-top">评论词云</a></li>
+					<li id="returnHome" class="active"><a href="index.html" class="hvr-bounce-to-top">返回首页 <span class="sr-only">(current)</span></a></li>
+					<!--<li><a href="wordCloud.html" class="hvr-bounce-to-top">评论词云</a></li>
 					<li><a href="tag.html" class="hvr-bounce-to-top">印象标签</a></li>
 					<li><a href="tradeNum.html" class="hvr-bounce-to-top">月交易量</a></li>
-					<li><a href="priceChange.html" class="hvr-bounce-to-top">价格变化</a></li>
+					<li><a href="priceChange.html" class="hvr-bounce-to-top">价格变化</a></li>-->
 				</ul>
 				<div class="clearfix"></div>
 			</div><!-- /.navbar-collapse -->
@@ -61,11 +71,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--end-header-->
 
     <div id="wordCloud">
-
+		<div id = "pie"></div>
+        <div id = "commentNumber"></div>
+        <div id="price"></div>
     </div>
 
 	<!--start-footer-->
-	<div class="footer">
+	<!--<div class="footer">
 		<div class="container">
 			<div class="footer-main">
                 <div class="col-md-4 footer-left">
@@ -82,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="clearfix"></div>
 			</div>
-		</div>
+		</div>-->
 		<script type="text/javascript">
 									$(document).ready(function() {
 										/*

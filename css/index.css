@@ -16,7 +16,7 @@
 #content{
     position: relative;
     width: 100%;
-    height: 800px;
+    /*height: 800px;*/
     /*height: auto;*/
 }
 .panel-heading{
@@ -25,6 +25,7 @@
     font-weight: 500;
 }
 #left{
+    position: absolute;
     width: 74%;
     height: 100%;
     float: left;
@@ -33,9 +34,11 @@
 #right{
     position: relative;
     width: 26%;
-    height: 100%;
+    /*height: 100%;*/
+    /*height: 800px;*/
     float: right;
     border: 2px solid #bce8f1;
+    /*visibility: hidden;*/
 }
 .panel-body{
     font-family: "pop";
@@ -46,14 +49,55 @@
 }
 #SellDist{
     position: absolute;
+    left: 50px;
+    width: 500px;
+    height: 600px;
+    text-align: center;
 }
 #FromWhere{
     position: absolute;
-    left: 650px;
-    top:  -70px;
+    left: 500px;
+    top:  -50px;
+    width: 500px;
+    height: 400px;
+
 }
 #BottomGraph{
     position: absolute;
     left: 50px;
-    top:  600px;
+    top:  400px;
+    height: 200px;
+}
+#end{
+    position: absolute;
+    left: 50px;
+    top:  700px;
+    height: 150px;
+}
+#box{
+    /*position: relative;*/
+    /*width: 100%;*/
+    /*height: 200px;*/
+}
+#pageBtn{
+    position: relative;
+    margin: 25px 50px 25px 50px;
+    /*height: 110px;*/
+
+}
+#previous,#next{
+    position: relative;
+    text-align: center;
+    width: 100px;
+    background-color: #05a6b3;
+    color: #ffffff;
+    bottom: 0;
+}
+#previous:hover{
+    background-color:#bce8f1;
+    color: #286090;
+}
+#next:hover{
+    background-color:#bce8f1;
+    color: #286090;
 }

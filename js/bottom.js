@@ -7,7 +7,7 @@
               dataType: 'json',     //接受数据格式    
               error:function(){console.log("error");},
               success:function(meg){ //请求成功后处理函数。
-                  console.log(meg);
+                  //console.log(meg);
                   ShowBottomGraph(meg)           
                 }
           })
@@ -17,15 +17,15 @@ function ShowBottomGraph(meg){
 
     var svg = d3.select("#BottomGraph")
 					.append("svg")
-					.attr("width", 1300)
-					.attr("height", 500);
+					.attr("width", 900)
+					.attr("height", 200);
     var k = 0;
 
     for(var i=0;i<8;i++)
     {
-        for(var j=0;j<60;j++)       
+        for(var j=0;j<44;j++)       
         {
-            svg.append("rect").attr("width",10).attr("height",10).attr("fill",function (){return bottomColor(meg[k].number)}).attr("transform","translate("+(j*20)+","+(i*20)+")").append("title").text(meg[k].name);
+            svg.append("rect").attr("width",10).attr("height",10).attr("fill",function (){return bottomColor(meg[k].number)}).attr("transform","translate("+(j*20)+","+(i*20)+")").on("mouseout",function(){d3.select(this).attr("width",10).attr("height",10)}).on("mouseover",function(){d3.select(this).attr("width",15).attr("height",15)}).append("title").text(meg[k].name);
             k++;
         }
     }

@@ -1,7 +1,7 @@
 var ShowFromWhere = function(meg){     
        
-        var width = 700;
-		var height = 600;
+        var width = 500;
+		var height = 400;
 
         var dataset = new Array();
         
@@ -44,7 +44,7 @@ var ShowFromWhere = function(meg){
 		
         var piedata = pie(dataset);
 
-        svg.append("text").text("各电商商品数量").attr("transform","translate(285,180)");
+        svg.append("text").text("各电商商品数量").attr("transform","translate(185,70)");
 
 
 		var arcs = svg.selectAll("g")
@@ -94,7 +94,7 @@ var ShowFromWhere = function(meg){
               dataType: 'json',     //接受数据格式    
               error:function(){console.log("error");},
               success:function(meg){ //请求成功后处理函数。
-                  console.log(meg);
+                  //console.log(meg);
                   ShowFromWhere(meg)           
                 }
           })
