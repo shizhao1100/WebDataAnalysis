@@ -1,0 +1,28 @@
+#wordCloud{
+    height: 550px;
+    /*position: absolute;*/
+}
+#returnHome{
+    width: 100%;
+    /*float: left;*/
+}
+#pie{
+    width: 400px;
+    height: 400px;
+    /*border: 1px solid #000000;*/
+    float: left;
+    margin: 10px 20px 0px 0px;
+}
+#commentNumber{
+    /*display: inline-block;*/
+    float: left;
+    width: 500px;
+    height: 500px;
+    margin: 10px 0px 0px 0px;
+}
+#price{
+    float: left;
+    width: 400px;
+    height: 500px;
+    margin: 10px 0px 0px 0px;
+}

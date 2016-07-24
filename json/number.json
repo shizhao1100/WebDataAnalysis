@@ -1,0 +1,22 @@
+{ "rows": [
+  { "name": "商品1", "number":"2000"},
+  { "name": "商品2", "number":"1900"},
+  { "name": "商品3", "number":"1800"},
+  { "name": "商品4", "number":"1700"},
+  { "name": "商品5", "number":"1600"},
+  { "name": "商品6", "number":"1500"},
+  { "name": "商品7", "number":"1400"},
+  { "name": "商品8", "number":"1300"},
+  { "name": "商品9", "number":"1200"},
+  { "name": "商品10", "number":"1100"},
+  { "name": "商品11", "number":"1000"},
+  { "name": "商品12", "number":"900"},
+  { "name": "商品13", "number":"800"},
+  { "name": "商品14", "number":"700"},
+  { "name": "商品15", "number":"600"},
+  { "name": "商品16", "number":"500"},
+  { "name": "商品17", "number":"400"},
+  { "name": "商品18", "number":"300"},
+  { "name": "商品19", "number":"200"},
+  { "name": "商品20", "number":"100"}
+]}
