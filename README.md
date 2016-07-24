@@ -2,4 +2,4 @@
 
 电商分析系统
 
-![image](https://github.com/shizhao1100/WebDataAnalysis/img/cover.png)
+![image](https://raw.githubusercontent.com/shizhao1100/WebDataAnalysis/master/img/cover.png)
